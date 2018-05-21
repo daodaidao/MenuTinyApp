@@ -16,8 +16,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        showWelcome()
+        
+        
+        
         return true
     }
+    
+    //MARK: - 欢迎界面
+    func showWelcome(){
+         //判断欢迎页面是否已经执行
+        let userDefault = UserDefaults.standard
+        let appVersion: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        
+        //是否是第一次进入
+        if(userDefault.string(forKey:MTAConstants.HDAppVersion))  == nil
+        {
+            //第一次进入
+            print("第一次进入")
+            userDefault.setValue(appVersion, forKey: MTAConstants.HDAppVersion)
+            userDefault.synchronize()
+            
+        }else {
+            
+            print("不是第一次进入")
+
+        }
+        
+        
+    }
+    
+    
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

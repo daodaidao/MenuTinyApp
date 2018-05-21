@@ -14,6 +14,7 @@
 		C9CEC6AC20B2C618009AFE86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CEC6AA20B2C618009AFE86 /* LaunchScreen.storyboard */; };
 		C9CEC6B720B2C619009AFE86 /* MenuTinyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CEC6B620B2C619009AFE86 /* MenuTinyTests.swift */; };
 		C9CEC6C220B2C619009AFE86 /* MenuTinyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CEC6C120B2C619009AFE86 /* MenuTinyUITests.swift */; };
+		C9CEC6D220B2CB7F009AFE86 /* MTAConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CEC6D120B2CB7F009AFE86 /* MTAConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C9CEC6BD20B2C619009AFE86 /* MenuTinyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuTinyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CEC6C120B2C619009AFE86 /* MenuTinyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTinyUITests.swift; sourceTree = "<group>"; };
 		C9CEC6C320B2C619009AFE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9CEC6D120B2CB7F009AFE86 /* MTAConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				C9CEC6A120B2C617009AFE86 /* AppDelegate.swift */,
 				C9CEC6A320B2C617009AFE86 /* ViewController.swift */,
+				C9CEC6CF20B2CB49009AFE86 /* General */,
 				C9CEC6A520B2C617009AFE86 /* Main.storyboard */,
 				C9CEC6A820B2C618009AFE86 /* Assets.xcassets */,
 				C9CEC6AA20B2C618009AFE86 /* LaunchScreen.storyboard */,
@@ -123,6 +126,22 @@
 				C9CEC6C320B2C619009AFE86 /* Info.plist */,
 			);
 			path = MenuTinyUITests;
+			sourceTree = "<group>";
+		};
+		C9CEC6CF20B2CB49009AFE86 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				C9CEC6D020B2CB49009AFE86 /* Helper */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		C9CEC6D020B2CB49009AFE86 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C9CEC6D120B2CB7F009AFE86 /* MTAConstants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +206,7 @@
 		C9CEC69620B2C617009AFE86 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MTA;
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = SYJ;
@@ -258,6 +278,7 @@
 			files = (
 				C9CEC6A420B2C617009AFE86 /* ViewController.swift in Sources */,
 				C9CEC6A220B2C617009AFE86 /* AppDelegate.swift in Sources */,
+				C9CEC6D220B2CB7F009AFE86 /* MTAConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

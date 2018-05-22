@@ -30,9 +30,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDefault = UserDefaults.standard
         let appVersion: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         
-        //是否是第一次进入
-        if(userDefault.string(forKey:MTAConstants.HDAppVersion))  == nil
-        {
+//        //是否是第一次进入
+//        if(userDefault.string(forKey:MTAConstants.HDAppVersion))  == nil
+//        {
             //第一次进入
             print("第一次进入")
             userDefault.setValue(appVersion, forKey: MTAConstants.HDAppVersion)
@@ -41,12 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             self.window?.rootViewController = MTAWelcomeViewController()
             
             
-        }else {
-            
-            print("不是第一次进入")
-//            self.window?.rootViewController =
-
-        }
+//        }else {
+//
+//            print("不是第一次进入")
+////            self.window?.rootViewController =
+//
+//        }
         
         
     }

@@ -1,0 +1,6 @@
+framework module Pods_MenuTiny {
+  umbrella header "Pods-MenuTiny-umbrella.h"
+
+  export *
+  module * { export * }
+}

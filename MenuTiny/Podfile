@@ -3,4 +3,6 @@ use_frameworks!
 
 target 'MenuTiny' do
 pod 'SnapKit', '~> 4.0.0'
+pod 'Kingfisher', '~> 3.1.3'
+
 end

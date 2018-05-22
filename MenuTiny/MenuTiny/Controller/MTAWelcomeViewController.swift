@@ -99,7 +99,13 @@ class MTAWelcomeViewController: UIViewController {
     @objc func toMain (){
         
         print("main")
-    
+        
+        //恢复隐藏状态栏
+        UIApplication.shared.isStatusBarHidden = false
+        //跳转到tabbar控制器
+        UIApplication.shared.delegate?.window??.rootViewController = MTATabbarController()
+        
+        
     }
     
     

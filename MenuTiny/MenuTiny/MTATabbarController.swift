@@ -61,11 +61,12 @@ class MTATabbarController: UITabBarController {
             myVC.tabBarItem = UITabBarItem(title: "个人", image: UIImage(named: "main_ico_menu_home"), selectedImage: UIImage(named: "main_ico_menu_home"))
             
             navc = UINavigationController(rootViewController: myVC)
-            
-            
+
             myVC.navigationItem.title = "我的"
             
             self.addChildViewController(navc)
+            
+            
         }
         
         

@@ -8,28 +8,77 @@
 
 import UIKit
 
-class MTAMyViewController: MTABaseViewController {
+private let kHeadViewHeight:CGFloat = 200
 
+class MTAMyViewController: MTABaseViewController,UITableViewDataSource,UITableViewDelegate {
+
+    var headerBg: UIImageView? = nil
+    
+    var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.edgesForExtendedLayout = UIRectEdge()
+//        self.extendedLayoutIncludesOpaqueBars = false
 
-        // Do any additional setup after loading the view.
-    }
+//        self.modalPresentationCapturesStatusBarAppearance = false
+//        self.automaticallyAdjustsScrollViewInsets = true;
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        setupUI()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
     }
-    */
+    
+    func setupUI(){
+        
+        createHeaderView()
+        createtableView()
+    }
+    
+    func createtableView(){
+        
+        
+        self.tableView = UITableView(frame: self.view.bounds, style: .plain)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(self.tableView)
+        
+        self.tableView.contentInset = UIEdgeInsetsMake(kHeadViewHeight, 0, 0, 0)
+        self.tableView.addSubview(headerBg!)
+        //兼容IOS11 防止把状态栏空白出去
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never;
+        }
+    }
+    
+    func createHeaderView(){
+        
+        //背景图
+        headerBg = UIImageView(frame: CGRect(x: 0, y: -kHeadViewHeight, width: MTAConstants.SREENWITH, height: kHeadViewHeight))
+        headerBg?.image = UIImage(named: "guide_step03")
+        
+        
+        
+        
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let tableViewCell = UITableViewCell()
+        
+        return tableViewCell
+        
+    }
+    
 
 }

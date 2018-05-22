@@ -34,8 +34,12 @@ class MTAHomeViewController: MTABaseViewController {
     
     //标签栏
     var menuView: UIView!
-    
     var tagListView: UIView!
+    
+    //菜谱专辑
+    var collectionListView: UIView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,13 +47,13 @@ class MTAHomeViewController: MTABaseViewController {
         self.edgesForExtendedLayout = UIRectEdge();
         
         self.navigationController?.navigationBar.isTranslucent = false
-       
+        
         
         
         
         setupUI()
         
-      
+        
     }
     
     func setupUI(){
@@ -60,6 +64,39 @@ class MTAHomeViewController: MTABaseViewController {
         createMenuView()
         
         createTagListView()
+        
+        createCollectionListView()
+    }
+    
+    func createCollectionListView(){
+        
+        
+        if collectionListView == nil {
+            collectionListView = UIView()
+            collectionListView.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+            self.view.addSubview(collectionListView)
+            
+            collectionListView.snp.makeConstraints { (make) in
+                make.top.equalTo(tagListView.snp.bottom).offset(MTAConstants.HDSpace)
+                make.left.equalTo(self.view).offset(0)
+                make.width.equalTo(MTAConstants.SREENWITH)
+                make.height.equalTo(300)
+            }
+            
+        }
+        
+        let title = UILabel()
+        title.text = "菜谱专辑"
+        collectionListView.addSubview(title)
+        title.snp.makeConstraints { (make) in
+            make.left.equalTo(16)
+            make.top.equalTo(0)
+            make.width.equalTo(MTAConstants.SREENWITH - 16)
+            make.height.equalTo(40)
+        }
+        
+        
+        
         
     }
     

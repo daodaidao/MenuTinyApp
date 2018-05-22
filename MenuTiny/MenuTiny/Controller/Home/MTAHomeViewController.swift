@@ -12,6 +12,8 @@ import Kingfisher
 
 private let HeadViewHeight : CGFloat = 200.0
 
+private let resourceArray  = [["title": "排行榜", "image": "HPHBIcon"],["title": "营养餐桌", "image": "HPHBIcon"],["title": "热门分类", "image": "HPHBIcon"],["title": "晒一晒", "image": "HPHBIcon"]]
+
 class MTAHomeViewController: MTABaseViewController {
     
     
@@ -30,6 +32,8 @@ class MTAHomeViewController: MTABaseViewController {
     // 分页栏
     var pageControl: UIPageControl!
     
+    //标签栏
+    var menuView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +45,63 @@ class MTAHomeViewController: MTABaseViewController {
         
         createHeaderView()
         
+        //创建标签
+        createMenuView()
+       
+    }
+    
+    func createMenuView(){
+        
+        if menuView == nil {
+            menuView = UIView()
+            menuView.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+            self.view.addSubview(menuView)
+            menuView.snp.makeConstraints { (make) in
+                make.top.equalTo(headView.snp.bottom).offset(0)
+                make.left.equalTo(self.view).offset(0)
+                make.width.equalTo(headView)
+                make.height.equalTo(MTAConstants.SREENHEIGHT / 4 + 5)
+            }
+        }
+        
+        
+        for i in 0 ..< resourceArray.count {
+            var btn : HDHM01Button?
+            
+            btn = menuView.viewWithTag(i + 300) as? HDHM01Button
+            if btn == nil {
+                btn = HDHM01Button()
+                btn?.tag = i + 300
+                btn?.setImage(UIImage(named: resourceArray[i]["image"]!), for: UIControlState())
+                btn?.setTitle(resourceArray[i]["title"], for: UIControlState())
+                btn!.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+                
+                btn?.titleLabel?.textAlignment = NSTextAlignment.center
+              
+                menuView.addSubview(btn!)
+                btn?.snp.makeConstraints({ (make) in
+                    
+                    make.left.equalTo(menuView).offset(CGFloat(i) * MTAConstants.SREENWITH / 4)
+                    make.top.equalTo(menuView).offset(0)
+                    make.width.equalTo(MTAConstants.SREENWITH / 4)
+                    make.height.equalTo(MTAConstants.SREENWITH / 4)
+
+                })
+                
+                
+                
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
         
     }
+    
     
     //创建头部滚动视图
     

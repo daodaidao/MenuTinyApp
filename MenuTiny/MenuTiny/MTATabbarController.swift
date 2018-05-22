@@ -21,7 +21,10 @@ class MTATabbarController: UITabBarController {
         //        self.delegate = self
         setupTabBarView()
         
+        
     }
+    
+   
     
     func setupTabBarView() {
         

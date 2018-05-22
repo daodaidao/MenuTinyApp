@@ -14,6 +14,7 @@
 		C992B6D620B3BBE30061D136 /* MTABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D420B3BBE30061D136 /* MTABaseViewController.swift */; };
 		C992B6DA20B3CF410061D136 /* HDCoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D920B3CF410061D136 /* HDCoreUtils.swift */; };
 		C992B6DD20B3D1D10061D136 /* MTAMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6DC20B3D1D10061D136 /* MTAMyViewController.swift */; };
+		C992B6DF20B3F1ED0061D136 /* HDHM01Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6DE20B3F1EC0061D136 /* HDHM01Button.swift */; };
 		C9CEC6A220B2C617009AFE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CEC6A120B2C617009AFE86 /* AppDelegate.swift */; };
 		C9CEC6A720B2C617009AFE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CEC6A520B2C617009AFE86 /* Main.storyboard */; };
 		C9CEC6A920B2C618009AFE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CEC6A820B2C618009AFE86 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		C992B6D420B3BBE30061D136 /* MTABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTABaseViewController.swift; sourceTree = "<group>"; };
 		C992B6D920B3CF410061D136 /* HDCoreUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDCoreUtils.swift; sourceTree = "<group>"; };
 		C992B6DC20B3D1D10061D136 /* MTAMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAMyViewController.swift; sourceTree = "<group>"; };
+		C992B6DE20B3F1EC0061D136 /* HDHM01Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDHM01Button.swift; sourceTree = "<group>"; };
 		C9CEC69E20B2C617009AFE86 /* MenuTiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuTiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CEC6A120B2C617009AFE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9CEC6A620B2C617009AFE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */,
+				C992B6DE20B3F1EC0061D136 /* HDHM01Button.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9CEC6A220B2C617009AFE86 /* AppDelegate.swift in Sources */,
+				C992B6DF20B3F1ED0061D136 /* HDHM01Button.swift in Sources */,
 				C992B6D120B3B7490061D136 /* MTATabbarController.swift in Sources */,
 				C992B6CD20B3A4600061D136 /* MTAWelcomeViewController.swift in Sources */,
 				C992B6DD20B3D1D10061D136 /* MTAMyViewController.swift in Sources */,

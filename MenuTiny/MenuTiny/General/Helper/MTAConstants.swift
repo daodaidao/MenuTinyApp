@@ -16,6 +16,17 @@ class MTAConstants: NSObject {
     static let HDAppVersion:String = "Version"
     
     
+    /// 屏幕宽度
+    static let SREENWITH = UIScreen.main.bounds.width
+    /// 屏幕高度
+    static let SREENHEIGHT = UIScreen.main.bounds.height
     
+    
+    /*
+        主题颜色
+     */
+    static let MTAMainColor = UIColor(red: 105/255.0, green: 149/255.0, blue: 0/255.0, alpha: 1.0)
+    
+
     
 }

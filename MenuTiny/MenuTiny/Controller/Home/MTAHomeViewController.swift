@@ -35,19 +35,32 @@ class MTAHomeViewController: MTABaseViewController {
     //标签栏
     var menuView: UIView!
     
+    var tagListView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //设置布局是否沿着整个屏幕,防止视图被navigationBar挡住
         self.edgesForExtendedLayout = UIRectEdge();
         
         self.navigationController?.navigationBar.isTranslucent = false
+       
+        
+        
+        
+        setupUI()
+        
+      
+    }
+    
+    func setupUI(){
         
         
         createHeaderView()
-        
         //创建标签
         createMenuView()
-       
+        
+        createTagListView()
+        
     }
     
     func createMenuView(){
@@ -60,7 +73,7 @@ class MTAHomeViewController: MTABaseViewController {
                 make.top.equalTo(headView.snp.bottom).offset(0)
                 make.left.equalTo(self.view).offset(0)
                 make.width.equalTo(headView)
-                make.height.equalTo(MTAConstants.SREENHEIGHT / 4 + 5)
+                make.height.equalTo(HeadViewHeight / 2)
             }
         }
         
@@ -77,7 +90,7 @@ class MTAHomeViewController: MTABaseViewController {
                 btn!.titleLabel?.font = UIFont.systemFont(ofSize: 15)
                 
                 btn?.titleLabel?.textAlignment = NSTextAlignment.center
-              
+                
                 menuView.addSubview(btn!)
                 btn?.snp.makeConstraints({ (make) in
                     
@@ -85,7 +98,7 @@ class MTAHomeViewController: MTABaseViewController {
                     make.top.equalTo(menuView).offset(0)
                     make.width.equalTo(MTAConstants.SREENWITH / 4)
                     make.height.equalTo(MTAConstants.SREENWITH / 4)
-
+                    
                 })
                 
                 
@@ -98,6 +111,28 @@ class MTAHomeViewController: MTABaseViewController {
         }
         
         
+        
+        
+    }
+    
+    //按钮
+    func createTagListView(){
+        
+        if tagListView == nil {
+            tagListView = UIView()
+            tagListView.backgroundColor = UIColor.green
+            self.view.addSubview(tagListView)
+            
+            tagListView.snp.makeConstraints { (make) in
+                
+                make.top.equalTo(menuView.snp.bottom).offset(MTAConstants.HDSpace)
+                make.left.equalTo(0)
+                make.width.equalTo(MTAConstants.SREENWITH)
+                make.height.equalTo(100)
+            }
+            
+            
+        }
         
         
     }

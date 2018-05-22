@@ -29,6 +29,10 @@ class MTAConstants: NSObject {
     static let HDMainTextColor = UIColor(red: 105/255.0, green: 105/255.0, blue: 105/255.0, alpha: 1.0);
     static let HDBGViewColor = UIColor(red: 241/255.0, green: 241/255.0, blue: 241/255.0, alpha: 1.0);
     static let HDYellowColor = UIColor(red: 245/255.0, green: 161/255.0, blue: 0/255.0, alpha: 1.0);
-
+    /**
+     *   视图间隔
+     **/
+    static let HDSpace = 10
+    
     
 }

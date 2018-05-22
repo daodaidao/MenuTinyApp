@@ -38,9 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             userDefault.setValue(appVersion, forKey: MTAConstants.HDAppVersion)
             userDefault.synchronize()
             
+            self.window?.rootViewController = MTAWelcomeViewController()
+            
+            
         }else {
             
             print("不是第一次进入")
+//            self.window?.rootViewController =
 
         }
         

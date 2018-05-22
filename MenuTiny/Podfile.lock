@@ -1,16 +1,20 @@
 PODS:
+  - Kingfisher (4.8.0)
   - SnapKit (4.0.0)
 
 DEPENDENCIES:
+  - Kingfisher
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Kingfisher
     - SnapKit
 
 SPEC CHECKSUMS:
+  Kingfisher: 976d828df2b24834c6a3f2fc4d82cdbd26552be1
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
 
-PODFILE CHECKSUM: 10262b12fb2bc9fbacd31791d7b783434eabed84
+PODFILE CHECKSUM: da301786e207d11992f5535fd91b1fbba39aa800
 
 COCOAPODS: 1.5.0

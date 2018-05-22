@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Kingfisher
+
 
 private let HeadViewHeight : CGFloat = 200.0
 
@@ -24,6 +26,10 @@ class MTAHomeViewController: MTABaseViewController {
     /// 头部滚动视图
     var headView: UIView!
     var headerScrollView: UIScrollView!
+    
+    // 分页栏
+    var pageControl: UIPageControl!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +65,8 @@ class MTAHomeViewController: MTABaseViewController {
             headerScrollView = UIScrollView()
             headerScrollView.bounces = false
             headerScrollView.isPagingEnabled = true
+            
+            headerScrollView.showsHorizontalScrollIndicator = false
             headerScrollView.contentSize = CGSize(width: 3 * MTAConstants.SREENWITH, height: HeadViewHeight)
             headView.addSubview(headerScrollView)
             
@@ -75,15 +83,48 @@ class MTAHomeViewController: MTABaseViewController {
             
         }
         
+        leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: MTAConstants.SREENWITH, height: HeadViewHeight))
+        headerScrollView.addSubview(leftImageView!)
+        
+        leftImageView?.kf.setImage(with: URL(string: "http://img1.hoto.cn/haodou/recipev4/wiki/1d5ff0c46.jpg"))
+        
         centerImageView = UIImageView(frame: CGRect(x: MTAConstants.SREENWITH, y: 0, width: MTAConstants.SREENWITH, height: HeadViewHeight))
-        headerScrollView.addSubview(centerImageView)
+        headerScrollView.addSubview(centerImageView!)
+        
+        centerImageView?.kf.setImage(with: URL(string: "http://img1.hoto.cn/haodou/recipev4/wiki/1d5ff0c46.jpg"))
+        
+        rightImageView = UIImageView(frame: CGRect(x: MTAConstants.SREENWITH * 2, y: 0, width: MTAConstants.SREENWITH, height: HeadViewHeight))
+        headerScrollView.addSubview(rightImageView!)
+        
+        rightImageView?.kf.setImage(with: URL(string: "http://img1.hoto.cn/haodou/recipev4/wiki/1d5ff0c46.jpg"))
+        
+        //分页栏
+        if pageControl == nil {
+            
+            pageControl = UIPageControl()
+            pageControl.addTarget(self, action: #selector(pageAction), for: .touchUpInside)
+            pageControl.numberOfPages = 3
+            headView.addSubview(pageControl)
+            
+            pageControl.snp.makeConstraints { (make) in
+                make.bottom.equalTo(0)
+                make.right.equalTo(0)
+                
+                make.width.equalTo(100)
+                make.height.equalTo(40)
+                
+                
+            }
+            
+        }
         
         
+    }
+    
+    @objc func pageAction() {
         
-        
-        
-        
-        
+        headerScrollView.contentOffset = CGPoint(x:MTAConstants.SREENWITH ,y:0)
+        index = pageControl.currentPage
         
     }
     

@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		82476337672A8CD2067CA58F /* Pods_MenuTiny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5404C356720AC119495DC0 /* Pods_MenuTiny.framework */; };
 		C992B6CD20B3A4600061D136 /* MTAWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6CC20B3A4600061D136 /* MTAWelcomeViewController.swift */; };
-		C992B6CF20B3A91E0061D136 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C992B6CE20B3A91E0061D136 /* Podfile */; };
 		C992B6D120B3B7490061D136 /* MTATabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D020B3B7490061D136 /* MTATabbarController.swift */; };
 		C992B6D320B3B91F0061D136 /* MTAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */; };
 		C992B6D620B3BBE30061D136 /* MTABaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D420B3BBE30061D136 /* MTABaseViewController.swift */; };
+		C992B6DA20B3CF410061D136 /* HDCoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D920B3CF410061D136 /* HDCoreUtils.swift */; };
+		C992B6DD20B3D1D10061D136 /* MTAMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6DC20B3D1D10061D136 /* MTAMyViewController.swift */; };
 		C9CEC6A220B2C617009AFE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CEC6A120B2C617009AFE86 /* AppDelegate.swift */; };
 		C9CEC6A720B2C617009AFE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9CEC6A520B2C617009AFE86 /* Main.storyboard */; };
 		C9CEC6A920B2C618009AFE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CEC6A820B2C618009AFE86 /* Assets.xcassets */; };
@@ -43,10 +44,11 @@
 		86F63C6DFD920112651B0BA4 /* Pods-MenuTiny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuTiny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuTiny/Pods-MenuTiny.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5404C356720AC119495DC0 /* Pods_MenuTiny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuTiny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C992B6CC20B3A4600061D136 /* MTAWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAWelcomeViewController.swift; sourceTree = "<group>"; };
-		C992B6CE20B3A91E0061D136 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		C992B6D020B3B7490061D136 /* MTATabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTATabbarController.swift; sourceTree = "<group>"; };
 		C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAHomeViewController.swift; sourceTree = "<group>"; };
 		C992B6D420B3BBE30061D136 /* MTABaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTABaseViewController.swift; sourceTree = "<group>"; };
+		C992B6D920B3CF410061D136 /* HDCoreUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDCoreUtils.swift; sourceTree = "<group>"; };
+		C992B6DC20B3D1D10061D136 /* MTAMyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAMyViewController.swift; sourceTree = "<group>"; };
 		C9CEC69E20B2C617009AFE86 /* MenuTiny.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MenuTiny.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9CEC6A120B2C617009AFE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9CEC6A620B2C617009AFE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				C992B6CC20B3A4600061D136 /* MTAWelcomeViewController.swift */,
 				C992B6D420B3BBE30061D136 /* MTABaseViewController.swift */,
 				C992B6D820B3BC740061D136 /* Home */,
+				C992B6DB20B3D18F0061D136 /* My */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -124,10 +127,17 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		C992B6DB20B3D18F0061D136 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				C992B6DC20B3D1D10061D136 /* MTAMyViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
 		C9CEC69520B2C617009AFE86 = {
 			isa = PBXGroup;
 			children = (
-				C992B6CE20B3A91E0061D136 /* Podfile */,
 				C9CEC6A020B2C617009AFE86 /* MenuTiny */,
 				C9CEC6B520B2C619009AFE86 /* MenuTinyTests */,
 				C9CEC6C020B2C619009AFE86 /* MenuTinyUITests */,
@@ -191,6 +201,7 @@
 		C9CEC6D020B2CB49009AFE86 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				C992B6D920B3CF410061D136 /* HDCoreUtils.swift */,
 				C9CEC6D120B2CB7F009AFE86 /* MTAConstants.swift */,
 			);
 			path = Helper;
@@ -305,7 +316,6 @@
 			files = (
 				C9CEC6AC20B2C618009AFE86 /* LaunchScreen.storyboard in Resources */,
 				C9CEC6A920B2C618009AFE86 /* Assets.xcassets in Resources */,
-				C992B6CF20B3A91E0061D136 /* Podfile in Resources */,
 				C9CEC6A720B2C617009AFE86 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,11 +362,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MenuTiny/Pods-MenuTiny-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 			);
@@ -375,9 +387,11 @@
 				C9CEC6A220B2C617009AFE86 /* AppDelegate.swift in Sources */,
 				C992B6D120B3B7490061D136 /* MTATabbarController.swift in Sources */,
 				C992B6CD20B3A4600061D136 /* MTAWelcomeViewController.swift in Sources */,
+				C992B6DD20B3D1D10061D136 /* MTAMyViewController.swift in Sources */,
 				C992B6D320B3B91F0061D136 /* MTAHomeViewController.swift in Sources */,
 				C992B6D620B3BBE30061D136 /* MTABaseViewController.swift in Sources */,
 				C9CEC6D220B2CB7F009AFE86 /* MTAConstants.swift in Sources */,
+				C992B6DA20B3CF410061D136 /* HDCoreUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +569,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MenuTiny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.MenuTiny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -573,7 +590,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MenuTiny/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.MenuTiny;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -589,7 +609,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MenuTinyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.MenuTinyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -605,7 +629,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MenuTinyTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.MenuTinyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -620,7 +648,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MenuTinyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.MenuTinyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -635,7 +667,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MenuTinyUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.syj.MenuTinyUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

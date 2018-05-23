@@ -12,7 +12,7 @@ class MTATabbarController: UITabBarController {
     
     var homeVC: MTAHomeViewController!
     var myVC: MTAMyViewController!
-    
+    var strollVC: MTAStrollHomeViewController!
     
     
     override func viewDidLoad() {
@@ -53,6 +53,20 @@ class MTATabbarController: UITabBarController {
             self.addChildViewController(navc)
         }
         
+        if strollVC == nil {
+            
+            strollVC = MTAStrollHomeViewController()
+            
+            strollVC.tabBarItem = UITabBarItem(title: "Stroll", image: UIImage(named: "main_ico_menu_home"), selectedImage: UIImage(named: "main_ico_menu_home"))
+            
+            navc = UINavigationController(rootViewController: strollVC)
+            
+            strollVC.navigationItem.title = "逛逛"
+            
+            self.addChildViewController(navc)
+            
+            
+        }
         
         if myVC == nil {
             
@@ -68,6 +82,9 @@ class MTATabbarController: UITabBarController {
             
             
         }
+        
+        
+
         
         
     }

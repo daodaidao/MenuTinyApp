@@ -17,7 +17,9 @@ class MTARankingViewController: MTABaseViewController,UITableViewDataSource,UITa
         
         setupUI()
         
-        doGetRequestData()
+        
+        //数据加载建立单独拿个demo 做
+//        doGetRequestData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,9 +78,18 @@ class MTARankingViewController: MTABaseViewController,UITableViewDataSource,UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = UITableViewCell()
-        
+        cell.textLabel?.text = "测试"
         return cell
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+        self.hidesBottomBarWhenPushed = true
+
+        navigationController?.pushViewController(MTAM08ViewController(), animated: true)
+  
+         self.hidesBottomBarWhenPushed = false
     }
     
     deinit {

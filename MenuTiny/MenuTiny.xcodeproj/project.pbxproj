@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		82476337672A8CD2067CA58F /* Pods_MenuTiny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB5404C356720AC119495DC0 /* Pods_MenuTiny.framework */; };
+		C91D28C920B55EA4007D53A5 /* MTAStrollHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D28C820B55EA4007D53A5 /* MTAStrollHomeViewController.swift */; };
+		C9728D7D20B55121009BC410 /* MTAM08ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9728D7C20B55121009BC410 /* MTAM08ViewController.swift */; };
 		C977D60E20B50FA800F95E39 /* MTALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977D60D20B50FA800F95E39 /* MTALoginViewController.swift */; };
 		C977D78820B51EDD00F95E39 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C977D78720B51EDD00F95E39 /* MBProgressHUD.m */; };
 		C977D78A20B51F5800F95E39 /* HDCoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977D78920B51F5800F95E39 /* HDCoreUtils.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		86F63C6DFD920112651B0BA4 /* Pods-MenuTiny.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MenuTiny.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MenuTiny/Pods-MenuTiny.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5404C356720AC119495DC0 /* Pods_MenuTiny.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MenuTiny.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C91D28C820B55EA4007D53A5 /* MTAStrollHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAStrollHomeViewController.swift; sourceTree = "<group>"; };
+		C9728D7C20B55121009BC410 /* MTAM08ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAM08ViewController.swift; sourceTree = "<group>"; };
 		C977D60D20B50FA800F95E39 /* MTALoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTALoginViewController.swift; sourceTree = "<group>"; };
 		C977D78520B51EDB00F95E39 /* MenuTiny-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MenuTiny-Bridging-Header.h"; sourceTree = "<group>"; };
 		C977D78620B51EDC00F95E39 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
@@ -124,11 +128,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C91D28C720B55E87007D53A5 /* Stroll */ = {
+			isa = PBXGroup;
+			children = (
+				C91D28C820B55EA4007D53A5 /* MTAStrollHomeViewController.swift */,
+			);
+			path = Stroll;
+			sourceTree = "<group>";
+		};
 		C992B6CB20B3A4490061D136 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				C992B6CC20B3A4600061D136 /* MTAWelcomeViewController.swift */,
 				C992B6D420B3BBE30061D136 /* MTABaseViewController.swift */,
+				C91D28C720B55E87007D53A5 /* Stroll */,
 				C992B6D820B3BC740061D136 /* Home */,
 				C992B6DB20B3D18F0061D136 /* My */,
 			);
@@ -141,6 +154,7 @@
 				C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */,
 				C992B6DE20B3F1EC0061D136 /* HDHM01Button.swift */,
 				C977D78B20B522D800F95E39 /* MTARankingViewController.swift */,
+				C9728D7C20B55121009BC410 /* MTAM08ViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -437,6 +451,8 @@
 				C992B6DD20B3D1D10061D136 /* MTAMyViewController.swift in Sources */,
 				C977D78C20B522D800F95E39 /* MTARankingViewController.swift in Sources */,
 				C992B6D320B3B91F0061D136 /* MTAHomeViewController.swift in Sources */,
+				C91D28C920B55EA4007D53A5 /* MTAStrollHomeViewController.swift in Sources */,
+				C9728D7D20B55121009BC410 /* MTAM08ViewController.swift in Sources */,
 				C992B6D620B3BBE30061D136 /* MTABaseViewController.swift in Sources */,
 				C977D78820B51EDD00F95E39 /* MBProgressHUD.m in Sources */,
 				C9CEC6D220B2CB7F009AFE86 /* MTAConstants.swift in Sources */,

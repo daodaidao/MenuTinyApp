@@ -80,5 +80,60 @@ class MTAMyViewController: MTABaseViewController,UITableViewDataSource,UITableVi
         
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let yOffset = scrollView.contentOffset.y
+        print("yOffset:\(yOffset)")
+        let xOffset = (yOffset + kHeadViewHeight) / 2
+        
+        
+        
+        if yOffset < -kHeadViewHeight{
+            //获取背景坐标及大小
+            var rect = headerBg?.frame
+            //frame的值就是一个CGRect 包括（originX，originY，width，height）。
+//            originX和originY对应着该对象在其superview中的坐标，也就是说他是一个相对坐标。
+            rect?.origin.y = yOffset
+            rect?.size.height = -yOffset
+            rect?.origin.x = xOffset
+            rect?.size.width = MTAConstants.SREENWITH + fabs(xOffset) * 2
+            
+            headerBg?.frame = rect!
+//            headerIcon?.snp.updateConstraints({ (make) in
+//
+//                make.left.equalTo(((rect?.width)! - 80) / 2 )
+ 
+//            })
+            
+            
+            
+            
+        }
+        
+        if yOffset > -kHeadViewHeight {
+            
+            
+            
+//            if yOffset > -kHeadViewHeight {
+//
+//                //上拉
+//                var ap = 1 - fabs(yOffset + 100) / CGFloat(100)
+//
+//                if ap > 1 {
+//
+//                    ap = 1
+//
+//                }
+//
+//
+//
+//            }
+            
+        }
+        
+        
+        
+    }
+    
 
 }

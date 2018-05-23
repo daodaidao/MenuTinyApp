@@ -14,7 +14,8 @@ class MTAConstants: NSObject {
  
      */
     static let HDAppVersion:String = "Version"
-    
+    static let AuthToken:String = "AuthToken"
+
     
     /// 屏幕宽度
     static let SREENWITH = UIScreen.main.bounds.width

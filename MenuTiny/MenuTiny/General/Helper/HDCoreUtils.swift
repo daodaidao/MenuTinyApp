@@ -82,114 +82,114 @@ class CoreUtils: NSObject {
      
      *  @ parameter view: hud的父视图
      */
-//    static func showProgressHUD(_ view:UIView){
-//
-//        hidProgressHUD(view)
-//
-//        let hud:MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
-//        hud.mode = MBProgressHUDMode.customView
-//        hud.color = CoreUtils.HDfromHexValue(0x000000, alpha: 0.4)
-//        hud.margin = 10
-//        hud.dimBackground = false
-//
-//        let waitView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-//
-//        let animation:UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-//        animation.image = UIImage(named: "hud_waiting_animation_white");
-//        waitView.addSubview(animation)
-//
-//        let logo = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-//        logo.image = UIImage(named: "hud_waiting_logo")
-//        waitView.addSubview(logo)
-//
-//        hud.customView = waitView
-//
-//        /**
-//        *  动画
-//        */
-//
-//        let rotationAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-//        rotationAnimation.toValue = CGFloat(M_PI*2.0)
-//        rotationAnimation.duration = 1;
-//        rotationAnimation.isCumulative = true;
-//        rotationAnimation.repeatCount = .infinity
-//        animation.layer.add(rotationAnimation, forKey: "rotationAnimation")
-//
-//        hud.removeFromSuperViewOnHide = true
-//
-//        hud.show(true)
-//
-//    }
+    static func showProgressHUD(_ view:UIView){
+    
+        hidProgressHUD(view)
+        
+        let hud:MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.mode = MBProgressHUDMode.customView
+        hud.color = CoreUtils.HDfromHexValue(0x000000, alpha: 0.4)
+        hud.margin = 10
+        hud.dimBackground = false
+        
+        let waitView:UIView = UIView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        
+        let animation:UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        animation.image = UIImage(named: "hud_waiting_animation_white");
+        waitView.addSubview(animation)
+        
+        let logo = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        logo.image = UIImage(named: "hud_waiting_logo")
+        waitView.addSubview(logo)
+        
+        hud.customView = waitView
+        
+        /**
+        *  动画
+        */
+        
+        let rotationAnimation:CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotationAnimation.toValue = CGFloat(M_PI*2.0)
+        rotationAnimation.duration = 1;
+        rotationAnimation.isCumulative = true;
+        rotationAnimation.repeatCount = .infinity
+        animation.layer.add(rotationAnimation, forKey: "rotationAnimation")
+        
+        hud.removeFromSuperViewOnHide = true
+        
+        hud.show(true)
+        
+    }
     
     /**
      隐藏动画
      
      *  @ parameter view: hud的父视图
      */
-//    static func hidProgressHUD(_ view:UIView){
-//
-//        MBProgressHUD.hide(for: view, animated: true)
-//    }
-//
-//    /**
-//     显示文本
-//
-//     *  @ parameter view:  hud的父视图
-//     *  @ parameter title: 显示的文本内容
-//     */
-//    static func  showWarningHUD(_ view:UIView,title:String){
-//
-//        hidProgressHUD(view)
-//
-//        let hud:MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
-//        hud.color = HDfromHexValue(0x000000, alpha: 0.6)
-//        hud.margin = 10
-//        hud.labelColor = HDColor(255, g: 255, b: 255, a: 1.0)
-//        hud.labelFont = UIFont.systemFont(ofSize: 15)
-//
-//        hud.mode = MBProgressHUDMode.customView;
-//        hud.customView = UIImageView(image: UIImage(named: "37x-warning"))
-//
-//        if title.characters.count>0 {
-//
-//            hud.labelText = title;
-//
-//        }
-//
-//        hud.removeFromSuperViewOnHide = true;
-//        hud.hide(true, afterDelay: 1.5)
-//
-//    }
-//
-//    /**
-//     显示文本
-//
-//     *  @ parameter view:  hud的父视图
-//     *  @ parameter title: 显示的文本内容
-//     */
-//    static func  showSuccessHUD(_ view:UIView,title:String){
-//
-//        hidProgressHUD(view)
-//
-//        let hud:MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
-//        hud.color = HDfromHexValue(0x000000, alpha: 0.6)
-//        hud.margin = 10
-//        hud.labelColor = HDColor(255, g: 255, b: 255, a: 1.0)
-//        hud.labelFont = UIFont.systemFont(ofSize: 15)
-//
-//        hud.mode = MBProgressHUDMode.customView;
-//        hud.customView = UIImageView(image: UIImage(named: "37x-success"))
-//
-//        if title.characters.count>0 {
-//
-//            hud.labelText = title;
-//
-//        }
-//
-//        hud.removeFromSuperViewOnHide = true;
-//        hud.hide(true, afterDelay: 1.5)
-//
-//    }
+    static func hidProgressHUD(_ view:UIView){
+    
+        MBProgressHUD.hide(for: view, animated: true)
+    }
+    
+    /**
+     显示文本
+     
+     *  @ parameter view:  hud的父视图
+     *  @ parameter title: 显示的文本内容
+     */
+    static func  showWarningHUD(_ view:UIView,title:String){
+    
+        hidProgressHUD(view)
+        
+        let hud:MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.color = HDfromHexValue(0x000000, alpha: 0.6)
+        hud.margin = 10
+        hud.labelColor = HDColor(255, g: 255, b: 255, a: 1.0)
+        hud.labelFont = UIFont.systemFont(ofSize: 15)
+        
+        hud.mode = MBProgressHUDMode.customView;
+        hud.customView = UIImageView(image: UIImage(named: "37x-warning"))
+        
+        if title.characters.count>0 {
+        
+            hud.labelText = title;
+            
+        }
+        
+        hud.removeFromSuperViewOnHide = true;
+        hud.hide(true, afterDelay: 1.5)
+        
+    }
+    
+    /**
+     显示文本
+     
+     *  @ parameter view:  hud的父视图
+     *  @ parameter title: 显示的文本内容
+     */
+    static func  showSuccessHUD(_ view:UIView,title:String){
+        
+        hidProgressHUD(view)
+        
+        let hud:MBProgressHUD = MBProgressHUD.showAdded(to: view, animated: true)
+        hud.color = HDfromHexValue(0x000000, alpha: 0.6)
+        hud.margin = 10
+        hud.labelColor = HDColor(255, g: 255, b: 255, a: 1.0)
+        hud.labelFont = UIFont.systemFont(ofSize: 15)
+        
+        hud.mode = MBProgressHUDMode.customView;
+        hud.customView = UIImageView(image: UIImage(named: "37x-success"))
+        
+        if title.characters.count>0 {
+            
+            hud.labelText = title;
+            
+        }
+        
+        hud.removeFromSuperViewOnHide = true;
+        hud.hide(true, afterDelay: 1.5)
+        
+    }
     
     
     /**

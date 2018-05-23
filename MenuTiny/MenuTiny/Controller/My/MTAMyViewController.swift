@@ -39,6 +39,10 @@ class MTAMyViewController: MTABaseViewController,UITableViewDataSource,UITableVi
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
     func setupUI(){
         
         createHeaderView()
@@ -90,6 +94,21 @@ class MTAMyViewController: MTABaseViewController,UITableViewDataSource,UITableVi
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ct01Array.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //判断用户是否登录
+        let defults = UserDefaults.standard
+        let authToken = defults.object(forKey: MTAConstants.AuthToken)
+       
+        
+        if authToken == nil {
+            
+            self.navigationController?.pushViewController(MTALoginViewController(), animated: true)
+            
+        }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

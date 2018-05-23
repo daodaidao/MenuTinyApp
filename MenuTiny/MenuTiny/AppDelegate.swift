@@ -15,16 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
-        
+ 
         //显示欢迎页面或者TabbarController主页面
         showWelcome()
+       
         //设置导航栏和tabbar样式
-          setUpBarStyle();
-        
-        
-        
+        setUpBarStyle();
+  
         return true
     }
     

@@ -125,7 +125,7 @@ class MTAHomeViewController: MTABaseViewController {
                 btn?.setImage(UIImage(named: resourceArray[i]["image"]!), for: UIControlState())
                 btn?.setTitle(resourceArray[i]["title"], for: UIControlState())
                 btn!.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-                
+                btn?.addTarget(self, action: #selector(listAction), for: .touchUpInside)
                 btn?.titleLabel?.textAlignment = NSTextAlignment.center
                 
                 menuView.addSubview(btn!)
@@ -150,6 +150,14 @@ class MTAHomeViewController: MTABaseViewController {
         
         
         
+    }
+    
+    @objc func listAction (){
+        
+        //跳转时隐藏tabbar
+        self.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(MTARankingViewController(), animated: true)
+        self.hidesBottomBarWhenPushed = false
     }
     
     //按钮

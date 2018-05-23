@@ -73,7 +73,7 @@ class MTAMyViewController: MTABaseViewController,UITableViewDataSource,UITableVi
         //背景图
         headerBg = UIImageView(frame: CGRect(x: 0, y: -kHeadViewHeight, width: MTAConstants.SREENWITH, height: kHeadViewHeight))
         headerBg?.image = UIImage(named: "guide_step03")
-        
+        headerBg?.contentMode = .scaleToFill
         //头像
         headerIcon = UIImageView()
         headerIcon?.layer.cornerRadius =  MTAConstants.SREENWITH / 8
@@ -100,7 +100,7 @@ class MTAMyViewController: MTABaseViewController,UITableViewDataSource,UITableVi
         //判断用户是否登录
         let defults = UserDefaults.standard
         let authToken = defults.object(forKey: MTAConstants.AuthToken)
-       
+        
         
         if authToken == nil {
             

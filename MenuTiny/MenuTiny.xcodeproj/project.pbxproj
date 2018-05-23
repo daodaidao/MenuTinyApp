@@ -11,6 +11,8 @@
 		C977D60E20B50FA800F95E39 /* MTALoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977D60D20B50FA800F95E39 /* MTALoginViewController.swift */; };
 		C977D78820B51EDD00F95E39 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C977D78720B51EDD00F95E39 /* MBProgressHUD.m */; };
 		C977D78A20B51F5800F95E39 /* HDCoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977D78920B51F5800F95E39 /* HDCoreUtils.swift */; };
+		C977D78C20B522D800F95E39 /* MTARankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977D78B20B522D800F95E39 /* MTARankingViewController.swift */; };
+		C977D78E20B5436100F95E39 /* HDHM02Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977D78D20B5436100F95E39 /* HDHM02Service.swift */; };
 		C992B6CD20B3A4600061D136 /* MTAWelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6CC20B3A4600061D136 /* MTAWelcomeViewController.swift */; };
 		C992B6D120B3B7490061D136 /* MTATabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D020B3B7490061D136 /* MTATabbarController.swift */; };
 		C992B6D320B3B91F0061D136 /* MTAHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */; };
@@ -53,6 +55,8 @@
 		C977D78620B51EDC00F95E39 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		C977D78720B51EDD00F95E39 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		C977D78920B51F5800F95E39 /* HDCoreUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HDCoreUtils.swift; sourceTree = "<group>"; };
+		C977D78B20B522D800F95E39 /* MTARankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTARankingViewController.swift; sourceTree = "<group>"; };
+		C977D78D20B5436100F95E39 /* HDHM02Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDHM02Service.swift; sourceTree = "<group>"; };
 		C992B6CC20B3A4600061D136 /* MTAWelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAWelcomeViewController.swift; sourceTree = "<group>"; };
 		C992B6D020B3B7490061D136 /* MTATabbarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTATabbarController.swift; sourceTree = "<group>"; };
 		C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTAHomeViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 			children = (
 				C992B6D220B3B91F0061D136 /* MTAHomeViewController.swift */,
 				C992B6DE20B3F1EC0061D136 /* HDHM01Button.swift */,
+				C977D78B20B522D800F95E39 /* MTARankingViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C992B6E120B3FFC70061D136 /* MTAHM01Service.swift */,
+				C977D78D20B5436100F95E39 /* HDHM02Service.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -424,10 +430,12 @@
 				C977D78A20B51F5800F95E39 /* HDCoreUtils.swift in Sources */,
 				C977D60E20B50FA800F95E39 /* MTALoginViewController.swift in Sources */,
 				C992B6DF20B3F1ED0061D136 /* HDHM01Button.swift in Sources */,
+				C977D78E20B5436100F95E39 /* HDHM02Service.swift in Sources */,
 				C992B6E220B3FFC70061D136 /* MTAHM01Service.swift in Sources */,
 				C992B6D120B3B7490061D136 /* MTATabbarController.swift in Sources */,
 				C992B6CD20B3A4600061D136 /* MTAWelcomeViewController.swift in Sources */,
 				C992B6DD20B3D1D10061D136 /* MTAMyViewController.swift in Sources */,
+				C977D78C20B522D800F95E39 /* MTARankingViewController.swift in Sources */,
 				C992B6D320B3B91F0061D136 /* MTAHomeViewController.swift in Sources */,
 				C992B6D620B3BBE30061D136 /* MTABaseViewController.swift in Sources */,
 				C977D78820B51EDD00F95E39 /* MBProgressHUD.m in Sources */,

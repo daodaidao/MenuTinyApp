@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class MTAStrollHomeViewController: MTABaseViewController,UITableViewDelegate,UITableViewDataSource {
 
     var tableView = UITableView()
@@ -44,13 +46,28 @@ class MTAStrollHomeViewController: MTABaseViewController,UITableViewDelegate,UIT
                 make.right.equalTo(WS.view).offset(0)
                 
             })
+        
+ 
+        tableView.mj_header = SYJRefreshGifHeader(refreshingBlock: { () -> Void in
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                
+                self.tableView.mj_header.endRefreshing()
+                
+            })
+
+        })
+      
+        tableView.mj_footer = SYJRefreshGifFooter(refreshingBlock: { () -> Void in
             
-//            tableView?.mj_header = HDRefreshGifHeader(refreshingBlock: { () -> Void in
-//
-//                WS.doGetRequestData()
-//
-//            })
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                
+                self.tableView.mj_footer.endRefreshing()
+                
+            })
             
+        })
+        
      
         
     }
